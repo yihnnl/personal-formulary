@@ -35,6 +35,15 @@ export const year3Drugs: Drug[] = [
       "It reduces symptoms and viral shedding but does not cure the infection, which can recur.",
       "For cold sore cream, apply five times a day for 5 days.",
     ],
+    contraindications: [
+      "Known hypersensitivity to aciclovir or valaciclovir.",
+    ],
+    cautions: [
+      "Maintain adequate hydration, especially with high oral doses or IV use — risk of crystal nephropathy.",
+      "Reduce the dose in renal impairment and in the elderly.",
+      "Risk of neurotoxicity (confusion, hallucinations, tremor) in renal impairment or with high doses.",
+      "Start as early as possible — most effective within 48–72 hours of symptom onset.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -65,6 +74,15 @@ export const year3Drugs: Drug[] = [
       "Stop and seek urgent help for a widespread rash, facial or throat swelling, or breathing difficulty, and tell future prescribers about any reaction.",
       "A non-allergic blotchy rash is common if it is taken during glandular fever — mention any current sore-throat illness.",
       "Seek advice for severe or bloody diarrhoea.",
+    ],
+    contraindications: [
+      "History of immediate hypersensitivity (anaphylaxis, urticaria, angioedema) to a penicillin or other beta-lactam.",
+    ],
+    cautions: [
+      "Avoid in glandular fever, acute lymphocytic leukaemia and CMV infection — high risk of a non-allergic maculopapular rash.",
+      "History of allergy (non-immediate reactions or atopy); possible cross-reactivity with other beta-lactams.",
+      "Reduce the dose in severe renal impairment.",
+      "Can cause false-positive urinary glucose (copper-reduction tests).",
     ],
     sources: ["NHS"],
   },
@@ -98,6 +116,16 @@ export const year3Drugs: Drug[] = [
       "Rinse your mouth and spit out, or brush your teeth, after each dose to reduce thrush and hoarseness.",
       "Use a spacer with a metered-dose inhaler to improve delivery and cut side effects.",
       "Do not stop it suddenly, and carry a steroid card if you are on a high dose.",
+    ],
+    contraindications: [
+      "Not for the relief of an acute asthma attack or status asthmaticus.",
+      "Hypersensitivity to the drug.",
+    ],
+    cautions: [
+      "Active or quiescent pulmonary tuberculosis; untreated respiratory infection.",
+      "High doses long-term — adrenal suppression, reduced bone density, growth restriction in children, glaucoma and cataract; monitor children's growth and issue a steroid card.",
+      "Risk of paradoxical bronchospasm — stop if it occurs.",
+      "Ensure a reliever inhaler is available for acute symptoms.",
     ],
     sources: ["NHS"],
   },
@@ -133,6 +161,16 @@ export const year3Drugs: Drug[] = [
       "It is now reserved for when other antibiotics are unsuitable, because of the risk of long-lasting side effects.",
       "Take it 2 hours apart from milk, dairy, antacids, and iron or calcium supplements, which stop it being absorbed; avoid excess sun.",
     ],
+    contraindications: [
+      "History of tendon disorders related to quinolone use.",
+      "Previous serious hypersensitivity to a quinolone.",
+    ],
+    cautions: [
+      "Reserved for when other antibiotics are unsuitable — risk of disabling, potentially long-lasting or irreversible tendon, musculoskeletal and nervous-system effects; stop at the first sign of tendon pain (elderly, corticosteroids, transplant).",
+      "Risk of aortic aneurysm and dissection; lowers the seizure threshold (epilepsy, brain disease).",
+      "QT prolongation — correct electrolytes and avoid other QT-prolonging drugs; myasthenia gravis (may worsen); G6PD deficiency.",
+      "Can cause C. difficile colitis; avoid excessive sunlight; raises theophylline and enhances warfarin; take 2 hours apart from divalent/trivalent cations.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -161,6 +199,17 @@ export const year3Drugs: Drug[] = [
       "Do not wear contact lenses during treatment or for 24 hours after finishing.",
       "Keep using it for about 48 hours after the eye looks better, then stop.",
       "Discard the bottle or tube after the recommended time (often 5 days after opening for drops); do not share it.",
+    ],
+    contraindications: [
+      "Personal or family history of blood dyscrasia, especially bone marrow depression.",
+      "Known hypersensitivity.",
+      "Third trimester of pregnancy and near term, and breastfeeding — risk of grey baby syndrome.",
+    ],
+    cautions: [
+      "Avoid prolonged or repeated courses.",
+      "Stop if symptoms persist or worsen, or if a hypersensitivity reaction develops.",
+      "Do not wear contact lenses during treatment or for 24 hours after.",
+      "Refer for eye pain, marked redness, photophobia or visual disturbance; discard after the recommended in-use period.",
     ],
     sources: ["NHS"],
   },
@@ -195,6 +244,16 @@ export const year3Drugs: Drug[] = [
       "Use with caution in older men with prostate problems and in glaucoma.",
       "Its sedating effect is sometimes used deliberately to help with itch at night.",
     ],
+    contraindications: [
+      "Neonates and premature infants.",
+      "Known hypersensitivity to antihistamines.",
+    ],
+    cautions: [
+      "Prostatic hypertrophy, urinary retention and bladder-outflow obstruction; angle-closure glaucoma.",
+      "Significant hepatic disease; epilepsy; pyloroduodenal obstruction.",
+      "Elderly (confusion, falls, antimuscarinic load) and young children (paradoxical stimulation).",
+      "Marked sedation — avoid driving and alcohol; additive with other CNS depressants and antimuscarinics.",
+    ],
     sources: [],
   },
   {
@@ -227,6 +286,15 @@ export const year3Drugs: Drug[] = [
       "Dry mouth is common — sugar-free gum or sips of water help.",
       "Use with caution in older people, in glaucoma, and in men with prostate problems.",
       "It is generally avoided in severe heart failure.",
+    ],
+    contraindications: [
+      "No absolute contraindication other than hypersensitivity.",
+    ],
+    cautions: [
+      "Severe heart failure — can reduce cardiac output.",
+      "Prostatic hypertrophy, urinary retention and angle-closure glaucoma.",
+      "Hepatic and severe renal impairment; epilepsy; elderly patients.",
+      "Potential for misuse (euphoriant effect with IV use); can mask an underlying disorder such as raised intracranial pressure.",
     ],
     sources: ["NHS"],
   },
@@ -262,6 +330,18 @@ export const year3Drugs: Drug[] = [
       "Take it with food if it upsets your stomach, and complete the course.",
       "Seek advice for severe or bloody diarrhoea, or yellowing of the eyes or skin.",
     ],
+    contraindications: [
+      "History of QT prolongation or ventricular arrhythmia, including torsades de pointes; hypokalaemia.",
+      "Concomitant ergot alkaloids, simvastatin or lovastatin, or other QT-prolonging drugs.",
+      "Concomitant colchicine in renal or hepatic impairment.",
+      "Severe hepatic impairment together with renal impairment.",
+    ],
+    cautions: [
+      "Potent CYP3A4 inhibitor — raises statins (myopathy), warfarin (raised INR), tacrolimus, ciclosporin, some DOACs and midazolam.",
+      "QT prolongation, especially with cardiac disease or electrolyte disturbance; coronary artery disease.",
+      "Reduce the dose in renal impairment.",
+      "Hepatotoxicity (usually reversible); may worsen myasthenia gravis.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -295,6 +375,16 @@ export const year3Drugs: Drug[] = [
       "Tell your prescriber about other medicines, as it can raise the levels of several, including warfarin.",
       "Report yellowing of the eyes or skin, dark urine, or severe abdominal pain.",
       "Avoid it in pregnancy unless essential — high-dose, prolonged use is linked with birth defects.",
+    ],
+    contraindications: [
+      "Concomitant terfenadine (with multiple- or high-dose fluconazole).",
+      "Concomitant astemizole, pimozide, quinidine or erythromycin — risk of QT prolongation and arrhythmia.",
+    ],
+    cautions: [
+      "Hepatotoxicity — monitor liver function with prolonged or high-dose use and stop if signs of liver disease appear.",
+      "QT prolongation and proarrhythmic conditions — correct electrolytes.",
+      "Inhibits CYP2C9 and CYP3A4 — raises warfarin, phenytoin, sulfonylureas, ciclosporin, tacrolimus and some statins.",
+      "Reduce the dose in renal impairment for multiple dosing; avoid in pregnancy unless essential and use effective contraception; risk of severe cutaneous reactions.",
     ],
     sources: ["NHS"],
   },
@@ -330,6 +420,15 @@ export const year3Drugs: Drug[] = [
       "It is given by injection or infusion in hospital, usually for a short course.",
       "The dose is based on your weight and kidney function.",
     ],
+    contraindications: [
+      "Myasthenia gravis.",
+    ],
+    cautions: [
+      "Narrow therapeutic index — monitor serum concentrations (peak and trough) and renal function, and dose by weight and renal function.",
+      "Nephrotoxic and ototoxic — avoid concurrent nephrotoxic or ototoxic drugs (loop diuretics, vancomycin, amphotericin, ciclosporin, platinum chemotherapy).",
+      "Elderly patients; renal impairment (extend the dosing interval); pre-existing hearing or vestibular impairment — ototoxicity can be irreversible.",
+      "Avoid prolonged courses; use ideal body weight for dosing in obesity; pregnancy — risk of auditory or vestibular nerve damage.",
+    ],
     sources: [],
   },
   {
@@ -359,6 +458,15 @@ export const year3Drugs: Drug[] = [
       "It works more slowly than a salbutamol reliever, so it is not the first choice for sudden breathlessness.",
       "Sips of water or sugar-free sweets help dry mouth.",
       "Rinse the mouthpiece and check your inhaler technique regularly.",
+    ],
+    contraindications: [
+      "Hypersensitivity to ipratropium or to atropine and its derivatives.",
+    ],
+    cautions: [
+      "Avoid spraying near the eyes — risk of blurred vision and acute angle-closure glaucoma; use a mouthpiece rather than a loose face mask, or protect the eyes.",
+      "Susceptibility to angle-closure glaucoma.",
+      "Prostatic hyperplasia, bladder-outflow obstruction and risk of urinary retention; cystic fibrosis (GI motility problems).",
+      "Paradoxical bronchospasm — stop if it occurs; slower onset than salbutamol, so not for rapid symptom relief.",
     ],
     sources: [],
   },
@@ -392,6 +500,16 @@ export const year3Drugs: Drug[] = [
       "Oral ketoconazole for fungal infection is no longer recommended in the UK because of the risk of liver damage.",
       "A short tingling or irritation on the skin is common — stop if a marked rash develops.",
     ],
+    contraindications: [
+      "Oral use: acute or chronic liver disease, or a history of hepatotoxicity with other drugs.",
+      "Oral use: concomitant hepatotoxic drugs, or drugs that prolong the QT interval or are CYP3A4 substrates with a risk of arrhythmia.",
+      "Pregnancy (oral).",
+    ],
+    cautions: [
+      "Oral ketoconazole for fungal infection is no longer recommended in the UK — reserved for specialist endocrine use (e.g. Cushing's syndrome) with intensive liver monitoring.",
+      "Potent CYP3A4 inhibitor with many interactions; risk of adrenal insufficiency and QT prolongation with systemic use.",
+      "Topical use — local irritation or sensitisation; stop if a marked reaction develops.",
+    ],
     sources: [],
   },
   {
@@ -420,6 +538,16 @@ export const year3Drugs: Drug[] = [
       "A second dose after 2 weeks is often advised, as eggs can survive.",
       "Alongside the medicine: wash hands and scrub nails first thing in the morning and after the toilet, wash nightwear and bed linen, and keep nails short for 2 weeks.",
       "Avoid it in pregnancy unless advised.",
+    ],
+    contraindications: [
+      "First trimester of pregnancy (manufacturer advises avoid).",
+      "Known hypersensitivity.",
+    ],
+    cautions: [
+      "Pregnancy and breastfeeding — use only if clearly necessary.",
+      "Children under 2 years — on specialist advice only.",
+      "High systemic doses for tissue helminths carry a risk of marrow suppression and hepatitis (not with standard single doses).",
+      "Treat the whole household for threadworm and repeat the dose after 2 weeks.",
     ],
     sources: ["NHS"],
   },
@@ -456,6 +584,18 @@ export const year3Drugs: Drug[] = [
       "Have the regular blood tests for full blood count and liver and kidney function.",
       "Report sore throat, fever, mouth ulcers, unusual bruising, or new breathlessness or a dry cough straight away; avoid pregnancy (both partners), limit alcohol, and check before taking trimethoprim or NSAIDs.",
     ],
+    contraindications: [
+      "Significant renal or hepatic impairment, active liver disease and alcohol dependence.",
+      "Profound bone marrow depression; active infection; immunodeficiency.",
+      "Active peptic ulceration.",
+      "Pregnancy and breastfeeding, and conception by either partner (avoid for at least 3–6 months after stopping); concomitant live vaccines; significant pleural effusion or ascites.",
+    ],
+    cautions: [
+      "Prescribe and dispense as a ONCE-WEEKLY dose — accidental daily dosing can be fatal; give folic acid on a different day.",
+      "Monitor full blood count, renal and liver function (and consider a chest X-ray) at baseline and regularly.",
+      "Toxicity increased by NSAIDs, trimethoprim/co-trimoxazole, penicillins, probenecid, ciclosporin and renal impairment.",
+      "Extra caution in the elderly and where third-space fluid can accumulate; limit alcohol; report new dyspnoea or dry cough (pneumonitis).",
+    ],
     sources: ["NHS"],
   },
   {
@@ -486,6 +626,15 @@ export const year3Drugs: Drug[] = [
       "Take it with or after food to reduce nausea; a metallic taste is common and settles.",
       "Report numbness or tingling in the hands or feet, especially on a longer course.",
       "Complete the full course.",
+    ],
+    contraindications: [
+      "Known hypersensitivity to nitroimidazoles.",
+    ],
+    cautions: [
+      "Avoid alcohol during treatment and for 48 hours after (including in oral solutions and some IV preparations) — disulfiram-like reaction.",
+      "Hepatic impairment — reduce the dose in severe impairment.",
+      "Risk of peripheral and central neurotoxicity with high doses or prolonged courses — avoid prolonged use.",
+      "Potentiates warfarin, lithium, phenytoin and fluorouracil; can darken the urine; avoid high single doses in pregnancy.",
     ],
     sources: ["NHS"],
   },
@@ -519,6 +668,15 @@ export const year3Drugs: Drug[] = [
       "Keep going for at least 48 hours after the mouth looks and feels better, to stop it coming back.",
       "If you wear dentures, clean and soak them, as Candida lives on them.",
     ],
+    contraindications: [
+      "Hypersensitivity to nystatin.",
+    ],
+    cautions: [
+      "Not absorbed — ineffective for systemic or deep fungal infection.",
+      "Continue for at least 48 hours after clinical cure to prevent relapse.",
+      "Treat dentures alongside oral infection.",
+      "Local irritation or sensitisation — stop if a marked reaction develops.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -549,6 +707,15 @@ export const year3Drugs: Drug[] = [
       "For travel, start the course before entering the malaria area, take it every day at the same time with food or a milky drink, and continue it for 7 days after leaving (for atovaquone–proguanil).",
       "No tablet is 100% effective — also use bite avoidance (repellent, nets, covering up) and seek urgent medical care for any fever during or up to a year after travel.",
       "Take it with food to reduce stomach upset.",
+    ],
+    contraindications: [
+      "Known hypersensitivity to proguanil or atovaquone.",
+    ],
+    cautions: [
+      "Reduce the dose, or avoid atovaquone–proguanil, in significant renal impairment (creatinine clearance below 30 mL/min) — risk of marrow suppression.",
+      "Enhances the effect of warfarin.",
+      "Separate from indigestion remedies and tetracyclines by at least 1 hour; take with food or a milky drink.",
+      "No regimen is fully protective — combine with bite avoidance; folate supplementation is advised in pregnancy.",
     ],
     sources: [],
   },
@@ -582,6 +749,15 @@ export const year3Drugs: Drug[] = [
       "Report breast tenderness or swelling; this reverses on stopping.",
       "Newer alternatives (e.g. famotidine, or a proton pump inhibitor) are often preferred because they have fewer interactions.",
       "See a doctor rather than self-treating if you have difficulty or pain on swallowing, unintended weight loss, or black stools.",
+    ],
+    contraindications: [
+      "No absolute contraindication other than hypersensitivity.",
+    ],
+    cautions: [
+      "Can mask the symptoms of gastric cancer — exclude malignancy and investigate alarm features (weight loss, dysphagia, GI bleeding) in middle-aged or older patients with new dyspepsia.",
+      "Inhibits several cytochrome P450 enzymes — raises levels of warfarin, phenytoin, theophylline and others.",
+      "Reduce the dose in renal and hepatic impairment.",
+      "Elderly or severely ill patients — risk of confusion; antiandrogenic effects (gynaecomastia) that reverse on stopping.",
     ],
     sources: [],
   },
@@ -617,6 +793,17 @@ export const year3Drugs: Drug[] = [
       "Take it on an empty stomach, 30–60 minutes before food, and complete the full course.",
       "Report yellowing of the eyes, dark urine, nausea or abdominal pain.",
     ],
+    contraindications: [
+      "Jaundice.",
+      "Known hypersensitivity to rifamycins.",
+      "Concomitant use of certain HIV protease inhibitors.",
+    ],
+    cautions: [
+      "Hepatotoxicity — check liver function before treatment and monitor, especially with pre-existing liver disease or alcohol dependence.",
+      "One of the most potent enzyme inducers — reduces the effect of hormonal contraceptives (use additional non-hormonal contraception), warfarin, corticosteroids, ciclosporin, many antivirals and methadone.",
+      "Colours urine, tears, sweat and saliva orange-red and permanently stains soft contact lenses.",
+      "Intermittent (non-daily) therapy is linked with flu-like syndrome, thrombocytopenia and acute kidney injury; porphyria.",
+    ],
     sources: [],
   },
   {
@@ -645,6 +832,15 @@ export const year3Drugs: Drug[] = [
       "It works by prevention, not by relieving symptoms that are already present — use it regularly (usually four times a day) and start before the allergy season or before contact with a known trigger.",
       "It can take days to weeks of regular use to reach full effect.",
       "For allergic conjunctivitis, do not wear soft contact lenses during treatment; a brief sting after the drops is normal.",
+    ],
+    contraindications: [
+      "Hypersensitivity to sodium cromoglicate.",
+    ],
+    cautions: [
+      "Prophylactic only — it will not relieve symptoms that are already present and must be used regularly.",
+      "For asthma, do not stop it abruptly (symptoms may recur over days) and never rely on it for an acute attack.",
+      "Inhaled powder or nebuliser solution can cause cough or transient bronchospasm — a prior bronchodilator may help.",
+      "Eye drops — do not wear soft contact lenses during treatment.",
     ],
     sources: [],
   },
@@ -680,6 +876,18 @@ export const year3Drugs: Drug[] = [
       "Do not stop it suddenly.",
       "Take it with food; weight gain and mild hair loss are common.",
     ],
+    contraindications: [
+      "Women and girls of childbearing potential unless the conditions of the Pregnancy Prevention Programme are met.",
+      "Pregnancy — absolute for bipolar disorder; in epilepsy only if there is no other effective treatment.",
+      "Personal or family history of severe hepatic dysfunction; acute porphyrias.",
+      "Known urea cycle disorders; known POLG-related mitochondrial disorders (and children under 2 in whom one is suspected).",
+    ],
+    cautions: [
+      "Hepatotoxicity risk is highest in the first 6 months and in children under 3 or with metabolic disorders — check liver function before and during early treatment.",
+      "Risk of acute pancreatitis — stop if it occurs; risk of hyperammonaemic encephalopathy.",
+      "Systemic lupus erythematosus; thrombocytopenia and impaired coagulation — check before surgery.",
+      "Do not stop abruptly (status epilepticus); interacts with lamotrigine, phenobarbital and carbapenems.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -712,6 +920,17 @@ export const year3Drugs: Drug[] = [
       "Seek urgent help for calf swelling or pain, chest pain or breathlessness (blood clot), and mention tamoxifen before surgery or a long period of immobility.",
       "It is usually taken for 5–10 years; hot flushes are common and often ease over time.",
       "Tell your prescriber about other medicines, as some antidepressants can reduce its activation.",
+    ],
+    contraindications: [
+      "Pregnancy, and for 2 months after stopping — teratogenic.",
+      "Breastfeeding.",
+      "Breast cancer risk reduction in women with a history of venous thromboembolism or an inherited thrombophilia.",
+    ],
+    cautions: [
+      "Increased risk of venous thromboembolism — stop before major elective surgery and consider stopping during prolonged immobilisation.",
+      "Endometrial hyperplasia and cancer — investigate any abnormal vaginal bleeding promptly.",
+      "Use non-hormonal contraception; avoid CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion) which reduce activation to endoxifen.",
+      "Rare visual or retinal changes; can cause an initial tumour flare in metastatic disease.",
     ],
     sources: [],
   },
@@ -746,6 +965,15 @@ export const year3Drugs: Drug[] = [
       "A blood test for liver function is usually done before and during treatment.",
       "The 1% cream for athlete's foot is used for 1–2 weeks.",
     ],
+    contraindications: [
+      "Chronic or active liver disease (oral use).",
+    ],
+    cautions: [
+      "Assess liver function before oral treatment and if it lasts beyond 4–6 weeks or hepatic symptoms occur — stop if liver injury is suspected.",
+      "Significant renal impairment (creatinine clearance below 50 mL/min) — halve the dose or avoid.",
+      "Risk of severe cutaneous reactions and DRESS — stop for a progressive rash; may exacerbate or precipitate lupus erythematosus.",
+      "Taste and smell disturbance, which can be prolonged; psoriasis may worsen; inhibits CYP2D6 (tricyclics, beta blockers, some antiarrhythmics and SSRIs).",
+    ],
     sources: ["NHS"],
   },
   {
@@ -776,6 +1004,15 @@ export const year3Drugs: Drug[] = [
       "Many things change the level: tell your prescriber if you start or stop smoking, get a significant infection, or start new medicines (e.g. ciprofloxacin, clarithromycin, cimetidine).",
       "Take the doses as prescribed and do not double up on a missed dose.",
     ],
+    contraindications: [
+      "Known hypersensitivity to theophylline or other xanthines.",
+    ],
+    cautions: [
+      "Narrow therapeutic index — monitor plasma theophylline concentration (about 5 hours after a dose at steady state).",
+      "Clearance falls (toxicity risk) in the elderly, heart failure, hepatic impairment, viral infection, fever, and with enzyme inhibitors (cimetidine, ciprofloxacin, clarithromycin, fluconazole).",
+      "Clearance rises (reduced effect) with smoking and enzyme inducers (rifampicin, carbamazepine, phenytoin, St John's wort) — review the dose if smoking status changes.",
+      "Cardiac arrhythmia, hyperthyroidism, peptic ulcer and epilepsy; risk of hypokalaemia with beta-2 agonists, corticosteroids and diuretics; maintain the same brand.",
+    ],
     sources: [],
   },
   {
@@ -803,6 +1040,17 @@ export const year3Drugs: Drug[] = [
       "Your heart function (an echocardiogram or MUGA scan) is checked before treatment and regularly during it — report breathlessness, ankle swelling, a persistent cough, or waking at night breathless.",
       "Infusion reactions such as chills and fever are commonest with the first dose and you will be monitored for them; tell staff if you feel unwell during the infusion.",
       "Tell your team if you might be pregnant — it must be avoided in pregnancy.",
+    ],
+    contraindications: [
+      "Baseline resting left ventricular ejection fraction below about 50%.",
+      "Severe dyspnoea at rest from complications of advanced malignancy.",
+      "Known hypersensitivity to trastuzumab, murine proteins or excipients.",
+    ],
+    cautions: [
+      "Cardiotoxicity — assess LVEF before treatment and roughly every 3 months during it, and withhold for a significant fall; risk is greater with or soon after anthracyclines.",
+      "Pre-existing cardiac failure, uncontrolled hypertension or coronary artery disease.",
+      "Infusion-related reactions — observe during and after the first infusion (fever, chills, bronchospasm).",
+      "Pulmonary events / interstitial lung disease; avoid pregnancy during treatment and for 7 months after the last dose (oligohydramnios).",
     ],
     sources: [],
   },

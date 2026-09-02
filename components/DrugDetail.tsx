@@ -1,20 +1,33 @@
 "use client";
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Year } from "@/lib/types";
 import { getDrugsForYear, toYearParam, yearLabel } from "@/lib/drugs";
 import { slugForTag } from "@/lib/topics";
 import { useProgress } from "@/lib/useProgress";
 import Tag from "@/components/Tag";
 import Breadcrumb from "@/components/Breadcrumb";
+import DrugNotes from "@/components/DrugNotes";
+import RelatedDrugs from "@/components/RelatedDrugs";
 
 const SECTIONS = [
   { key: "drugClass", num: "01", label: "Drug Class" },
   { key: "indications", num: "02", label: "Indications" },
   { key: "mechanism", num: "03", label: "Mechanism of Action" },
   { key: "adrs", num: "04", label: "Adverse Drug Reactions" },
-  { key: "counselling", num: "05", label: "Counselling Points" },
+  { key: "contraindications", num: "05", label: "Contraindications" },
+  { key: "cautions", num: "06", label: "Cautions" },
+  { key: "counselling", num: "07", label: "Counselling Points" },
 ] as const;
+
+const LIST_SECTIONS = new Set([
+  "indications",
+  "adrs",
+  "contraindications",
+  "cautions",
+  "counselling",
+]);
 
 /**
  * Drug detail page body, shared by every year. Given the year + slug it reads
@@ -69,6 +82,18 @@ export default function DrugDetail({ year, slug }: { year: Year; slug: string })
         ))}
       </div>
 
+      <div className="mt-3">
+        <Link
+          href={`/compare?a=${drug.slug}`}
+          className="inline-flex items-center gap-1.5 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
+        >
+          Compare
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </Link>
+      </div>
+
       <hr className="mt-8 border-line" />
 
       <div className="divide-y divide-line">
@@ -83,9 +108,7 @@ export default function DrugDetail({ year, slug }: { year: Year; slug: string })
               </h2>
             </div>
 
-            {section.key === "indications" ||
-            section.key === "adrs" ||
-            section.key === "counselling" ? (
+            {LIST_SECTIONS.has(section.key) ? (
               <ul className="mt-3 space-y-2 pl-1">
                 {(drug[section.key] as string[]).map((item, i) => (
                   <li key={i} className="flex gap-2.5 text-[15px] text-ink leading-relaxed">
@@ -115,6 +138,14 @@ export default function DrugDetail({ year, slug }: { year: Year; slug: string })
       </div>
 
       <hr className="border-line" />
+
+      <DrugNotes year={year} slug={drug.slug} />
+
+      <hr className="mt-6 border-line" />
+
+      <RelatedDrugs drug={drug} />
+
+      <hr className="mt-6 border-line" />
 
       <div className="pt-6">
         <p className="text-[13px] font-medium tracking-wide text-muted uppercase mb-2.5">

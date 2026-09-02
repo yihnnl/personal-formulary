@@ -12,6 +12,11 @@ import Breadcrumb from "@/components/Breadcrumb";
  */
 export default function TopicView({ topic }: { topic: Topic }) {
   const groups = drugsForTopic(topic);
+  const flatDrugs = groups.flatMap((g) => g.drugs);
+  const compareHref =
+    flatDrugs.length >= 2
+      ? `/compare?a=${flatDrugs[0].slug}&b=${flatDrugs[1].slug}`
+      : null;
 
   return (
     <div className="max-w-2xl mx-auto px-5 sm:px-8 py-10 sm:py-14">
@@ -71,9 +76,22 @@ export default function TopicView({ topic }: { topic: Topic }) {
       )}
 
       <section className="mt-10">
-        <h2 className="text-[13px] font-medium tracking-wide text-muted uppercase">
-          Formulary drugs
-        </h2>
+        <div className="flex items-baseline justify-between gap-3">
+          <h2 className="text-[13px] font-medium tracking-wide text-muted uppercase">
+            Formulary drugs
+          </h2>
+          {compareHref && (
+            <Link
+              href={compareHref}
+              className="inline-flex items-center gap-1 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
+            >
+              Compare
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </Link>
+          )}
+        </div>
 
         {groups.length === 0 ? (
           <p className="mt-3 text-[14px] text-muted">

@@ -35,6 +35,18 @@ export const year2Drugs: Drug[] = [
       "Stop and seek advice if you develop new heartburn, or pain or difficulty on swallowing.",
       "Keep up good dental hygiene and tell your dentist you take it before any invasive dental work; ensure enough calcium and vitamin D.",
     ],
+    contraindications: [
+      "Abnormalities of the oesophagus or other factors that delay oesophageal emptying (stricture, achalasia).",
+      "Inability to stand or sit upright for at least 30 minutes.",
+      "Hypocalcaemia.",
+      "Severe renal impairment (eGFR below ~35 mL/min/1.73m²).",
+    ],
+    cautions: [
+      "Active upper GI disease — dysphagia, symptomatic oesophageal disease, gastritis or peptic ulcer; recent GI surgery.",
+      "Correct hypocalcaemia and vitamin D deficiency before starting.",
+      "Risk factors for osteonecrosis of the jaw — poor dental hygiene, smoking, corticosteroids, chemotherapy; arrange a dental check first.",
+      "Atypical femoral fracture — report new thigh, hip or groin pain.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -65,6 +77,16 @@ export const year2Drugs: Drug[] = [
       "Stop and seek urgent advice if a rash develops, especially with fever, blistering or mouth ulcers.",
       "Take it after food with plenty of fluid.",
     ],
+    contraindications: [
+      "Do not start (or stop) during an acute gout attack.",
+      "Known severe hypersensitivity to allopurinol.",
+    ],
+    cautions: [
+      "Introduce under NSAID or colchicine cover and continue it through any flare.",
+      "Reduce the dose in renal or hepatic impairment.",
+      "Higher risk of severe cutaneous reactions with HLA-B*5801 (e.g. Han Chinese, Thai, Korean origin) and in renal impairment.",
+      "Interactions — reduce the dose of azathioprine or mercaptopurine; rash with amoxicillin/ampicillin; enhanced effect with ACE inhibitors and thiazides.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -94,6 +116,17 @@ export const year2Drugs: Drug[] = [
       "Follow sick-day rules: stop it temporarily if you are acutely unwell, dehydrated or not eating and drinking normally.",
       "Seek urgent help for nausea, vomiting, abdominal pain, deep breathing or a sweet/fruity breath smell, even if your glucose is not high.",
       "Report severe pain, swelling or redness of the genitals or perineum urgently.",
+    ],
+    contraindications: [
+      "Diabetic ketoacidosis.",
+      "Type 1 diabetes for glucose lowering (specialist use only).",
+      "Previous serious hypersensitivity reaction.",
+    ],
+    cautions: [
+      "Risk of diabetic ketoacidosis, which may be euglycaemic — withhold during acute serious illness, surgery, prolonged fasting or a very-low-carbohydrate diet.",
+      "Volume depletion and hypotension — elderly, loop diuretics, low blood pressure.",
+      "Active foot disease and risk factors for Fournier's gangrene (necrotising perineal infection).",
+      "Recurrent genital or urinary infection; reduced glucose-lowering efficacy at low eGFR.",
     ],
     sources: ["NHS"],
   },
@@ -128,6 +161,17 @@ export const year2Drugs: Drug[] = [
       "Attend regular thyroid and liver function blood tests.",
       "See an optician if you develop visual haloes or blurring; interactions (e.g. with warfarin and digoxin) persist for a long time after stopping.",
     ],
+    contraindications: [
+      "Sinus bradycardia, sino-atrial heart block and (unless a pacemaker is fitted) severe conduction disturbance or sinus node disease.",
+      "Active thyroid dysfunction; iodine sensitivity.",
+      "Avoid IV use in severe respiratory failure, circulatory collapse or severe hypotension.",
+    ],
+    cautions: [
+      "Check thyroid and liver function, an ECG, and (for long-term use) a chest X-ray before starting, then monitor periodically.",
+      "Elderly patients and heart failure.",
+      "Long half-life — interactions with warfarin, digoxin and other QT-prolonging drugs persist for months after stopping.",
+      "Acute porphyrias; severe hypotension with rapid IV injection.",
+    ],
     sources: [],
   },
   {
@@ -158,6 +202,18 @@ export const year2Drugs: Drug[] = [
       "Rise slowly from sitting or lying to reduce dizziness.",
       "Do not stop suddenly — the dose should be reduced gradually.",
     ],
+    contraindications: [
+      "Recent myocardial infarction.",
+      "Arrhythmias, especially heart block.",
+      "Manic phase of bipolar disorder.",
+      "Severe liver disease.",
+    ],
+    cautions: [
+      "Cardiovascular disease and risk factors for QT prolongation.",
+      "Epilepsy — lowers the seizure threshold.",
+      "Prostatic hypertrophy, urinary retention and angle-closure glaucoma.",
+      "Elderly patients (falls, confusion, antimuscarinic load); concurrent MAOI or other serotonergic drugs; dangerous in overdose.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -186,6 +242,18 @@ export const year2Drugs: Drug[] = [
       "Fold used patches sticky-side together and dispose of them safely — they still contain active drug.",
       "Do not drink alcohol, and take care with driving until you know how it affects you.",
       "Use laxatives as advised to prevent constipation.",
+    ],
+    contraindications: [
+      "Acute respiratory depression.",
+      "Acute or severe asthma.",
+      "Paralytic ileus or risk of paralytic ileus.",
+      "Head injury with raised intracranial pressure; acute alcoholism.",
+    ],
+    cautions: [
+      "Elderly and debilitated patients; hepatic impairment (transdermal not recommended in severe impairment).",
+      "Respiratory disease; hypotension and shock.",
+      "May precipitate withdrawal if given too soon after a full opioid agonist.",
+      "Concurrent CNS depressants (benzodiazepines, alcohol, gabapentinoids); external heat increases absorption from patches; QT-prolongation risk at high dose.",
     ],
     sources: ["NHS"],
   },
@@ -220,6 +288,18 @@ export const year2Drugs: Drug[] = [
       "Do not stop it suddenly because of the risk of seizures.",
       "Blood tests monitor sodium, blood counts and liver function.",
     ],
+    contraindications: [
+      "AV conduction abnormalities unless a pacemaker is fitted.",
+      "History of bone marrow depression.",
+      "Acute porphyrias.",
+      "Concomitant or recent (within 14 days) MAOIs.",
+    ],
+    cautions: [
+      "Test for HLA-B*1502 in people of Han Chinese or Thai origin — risk of severe skin reactions (SJS/TEN).",
+      "Cardiac, hepatic or renal disease; glaucoma.",
+      "Risk of hyponatraemia, especially with diuretics and in the elderly.",
+      "Potent enzyme inducer — reduces the effect of hormonal contraceptives, DOACs and many other drugs; avoid abrupt withdrawal; teratogenic.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -248,6 +328,15 @@ export const year2Drugs: Drug[] = [
       "It can take 4–8 weeks to feel the full benefit; a beta blocker may be used for symptom relief in the meantime.",
       "Use effective contraception and tell your doctor promptly if you might be pregnant.",
     ],
+    contraindications: [
+      "Pre-existing severe blood disorders.",
+    ],
+    cautions: [
+      "Stop immediately and check a full blood count if there are signs of infection, especially sore throat, fever or mouth ulcers (agranulocytosis).",
+      "Hepatic impairment — reduce the dose; stop if acute pancreatitis occurs.",
+      "Pregnancy — risk of congenital malformations, greatest in the first trimester; use the lowest effective dose and specialist review (propylthiouracil is often preferred in the first trimester).",
+      "Passes into breast milk — monitor the infant's thyroid function.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -274,6 +363,15 @@ export const year2Drugs: Drug[] = [
       "Stop and seek advice if you vomit blood or pass black, tarry stools.",
       "It is usually reviewed after about 4 weeks and stopped if there is no clear benefit.",
       "It is not a reliever inhaler and does not treat sudden breathlessness.",
+    ],
+    contraindications: [
+      "Active peptic ulceration.",
+    ],
+    cautions: [
+      "History of peptic ulcer disease.",
+      "Risk of GI bleeding — stop if it occurs.",
+      "Elderly or debilitated patients.",
+      "Review after about 4 weeks and stop if there is no clear benefit.",
     ],
     sources: ["NHS"],
   },
@@ -307,6 +405,18 @@ export const year2Drugs: Drug[] = [
       "Do not drink alcohol and do not drive until you know how it affects you, including after any dose change.",
       "Do not stop abruptly after regular use — the dose is tapered to avoid withdrawal.",
     ],
+    contraindications: [
+      "Acute respiratory depression.",
+      "Acute or severe asthma and chronic obstructive airways disease.",
+      "Paralytic ileus or risk of it; acute abdomen; delayed gastric emptying.",
+      "Comatose patients; raised intracranial pressure or head injury; phaeochromocytoma.",
+    ],
+    cautions: [
+      "Elderly and debilitated patients.",
+      "Reduce the dose in hepatic and renal impairment.",
+      "Hypotension, shock, hypothyroidism and adrenocortical insufficiency; convulsive disorders.",
+      "History of substance misuse; concurrent CNS depressants; toxicity in overdose reversed by naloxone.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -336,6 +446,18 @@ export const year2Drugs: Drug[] = [
       "There is a maximum dose (lower in older people and in liver impairment) because of its effect on heart rhythm.",
       "Do not stop abruptly — taper to avoid discontinuation symptoms such as dizziness, 'electric shock' sensations and flu-like feelings.",
     ],
+    contraindications: [
+      "Known QT-interval prolongation or congenital long QT syndrome.",
+      "Concomitant use of other QT-prolonging medicines.",
+      "Concomitant MAOIs, or within 2 weeks of stopping one.",
+      "Concomitant pimozide.",
+    ],
+    cautions: [
+      "Dose-dependent QT prolongation — maximum 40 mg/day (20 mg in the elderly, in hepatic impairment or in CYP2C19 poor metabolisers).",
+      "Correct hypokalaemia and hypomagnesaemia before starting; cardiac disease and bradycardia.",
+      "History of bleeding disorders, or concurrent NSAIDs or anticoagulants; epilepsy; hyponatraemia risk in the elderly.",
+      "Increased suicidal thoughts early in treatment, especially in those under 25; taper to stop.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -364,6 +486,15 @@ export const year2Drugs: Drug[] = [
       "Keep using it for the full course, including a few days after symptoms clear, to prevent recurrence.",
       "It can weaken latex condoms and diaphragms — use additional or alternative contraception during treatment and for a few days after.",
       "For vaginal thrush the pessary or internal cream is used at night; see a clinician if there is no improvement in 7 days or symptoms keep recurring.",
+    ],
+    contraindications: [
+      "Known hypersensitivity to imidazole antifungals.",
+    ],
+    cautions: [
+      "Damages latex condoms and diaphragms — use additional or alternative contraception during treatment and for several days after.",
+      "Avoid contact with the eyes.",
+      "Seek review if no improvement within 7 days, if symptoms recur frequently, or in pregnancy (use an applicator gently).",
+      "Confirm the diagnosis for a first episode, or in those under 16 or over 60.",
     ],
     sources: ["NHS"],
   },
@@ -398,6 +529,18 @@ export const year2Drugs: Drug[] = [
       "Report constipation early — it can become serious.",
       "Do not miss more than about 48 hours of doses without medical advice, as the dose then has to be re-titrated; tell your team if you start or stop smoking, as this changes blood levels.",
     ],
+    contraindications: [
+      "History of agranulocytosis or granulocytopenia (other than from previous chemotherapy).",
+      "Bone-marrow disorders; uncontrolled epilepsy; paralytic ileus.",
+      "Severe cardiac disorder (e.g. myocarditis); active liver disease or hepatic failure.",
+      "Severe CNS depression or coma; inability to comply with regular blood monitoring.",
+    ],
+    cautions: [
+      "Mandatory registration and regular neutrophil/white-cell count monitoring — stop for neutropenia.",
+      "Risk of myocarditis and cardiomyopathy, especially in the first 2 months — investigate tachycardia, chest pain or breathlessness.",
+      "Risk of severe constipation progressing to intestinal obstruction — treat early.",
+      "Lowers the seizure threshold (dose-related); orthostatic hypotension on titration; smoking cessation raises plasma levels.",
+    ],
     sources: [],
   },
   {
@@ -427,6 +570,18 @@ export const year2Drugs: Drug[] = [
       "Effectiveness is reduced by missed pills, vomiting or severe diarrhoea, and enzyme-inducing drugs — follow the missed-pill rules and use condoms as back-up.",
       "It is not suitable if you smoke and are over 35, have migraine with aura, or have certain cardiovascular risk factors.",
       "Take it at roughly the same time each day.",
+    ],
+    contraindications: [
+      "Personal history of venous or arterial thrombosis, or a known thrombogenic mutation.",
+      "Migraine with aura.",
+      "Smoking 15 or more cigarettes a day at age 35 or over, or multiple arterial risk factors; blood pressure ≥160/100 mmHg.",
+      "Current breast cancer; active liver disease; less than 6 weeks postpartum if breastfeeding; known or suspected pregnancy.",
+    ],
+    cautions: [
+      "Assess venous and arterial risk factors before prescribing and at each review (obesity, age, immobility, family history, blood pressure).",
+      "VTE risk is highest in the first year of use and after restarting following a break.",
+      "Efficacy reduced by enzyme-inducing drugs, vomiting or severe diarrhoea.",
+      "Stop 4 weeks before major elective surgery or prolonged immobilisation; investigate new severe headache, focal neurology, calf pain or breathlessness.",
     ],
     sources: ["NHS"],
   },
@@ -458,6 +613,16 @@ export const year2Drugs: Drug[] = [
       "Do not stop abruptly after more than a few weeks — the dose must be tapered to let the adrenal glands recover.",
       "Carry a steroid emergency card and tell any healthcare professional you are taking it.",
       "Avoid contact with chickenpox or measles if you are not immune, and seek advice if you are exposed.",
+    ],
+    contraindications: [
+      "Systemic infection unless covered by specific antimicrobial therapy.",
+      "Live virus vaccines while on immunosuppressive doses.",
+    ],
+    cautions: [
+      "Do not stop abruptly after a prolonged course — taper and issue a steroid emergency card (adrenal suppression).",
+      "Diabetes (marked hyperglycaemia); hypertension and heart failure; osteoporosis; peptic ulcer disease.",
+      "Psychiatric reactions — mania, psychosis, depression; report mood change.",
+      "Ocular effects (glaucoma, cataract); risk of severe chickenpox or measles if not immune; children (growth); risk of tumour lysis syndrome when treating haematological malignancy.",
     ],
     sources: ["NHS"],
   },
@@ -493,6 +658,18 @@ export const year2Drugs: Drug[] = [
       "Avoid alcohol and take care with driving and machinery — it impairs reactions, sometimes into the next day.",
       "Its effects are additive with opioids and other sedatives.",
     ],
+    contraindications: [
+      "Respiratory depression and severe respiratory insufficiency.",
+      "Sleep apnoea syndrome.",
+      "Marked neuromuscular respiratory weakness, including unstable myasthenia gravis.",
+      "Severe hepatic impairment; acute pulmonary insufficiency.",
+    ],
+    cautions: [
+      "Elderly and debilitated patients — reduce the dose (falls, confusion).",
+      "Respiratory disease and muscle weakness.",
+      "History of alcohol or drug dependence; personality disorder.",
+      "Short-term use only (2–4 weeks including tapering); avoid abrupt withdrawal; concurrent opioids or other CNS depressants.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -523,6 +700,18 @@ export const year2Drugs: Drug[] = [
       "A stomach-protecting medicine (PPI) may be co-prescribed if you are at higher risk.",
       "Avoid taking it with other NSAIDs including aspirin, and use with caution if you have kidney disease, heart failure or asthma.",
     ],
+    contraindications: [
+      "Active or previous NSAID-related GI ulceration, bleeding or perforation.",
+      "Severe heart failure.",
+      "History of hypersensitivity to aspirin or another NSAID (asthma, angioedema, urticaria).",
+      "Severe renal impairment; third trimester of pregnancy.",
+    ],
+    cautions: [
+      "Cardiovascular, cerebrovascular and peripheral arterial disease — lower cardiovascular risk than some NSAIDs but not absent.",
+      "Hypertension and heart failure; renal or hepatic impairment; elderly patients.",
+      "History of peptic ulcer — co-prescribe a proton pump inhibitor.",
+      "Asthma and coagulation disorders; use the lowest dose for the shortest time.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -551,6 +740,18 @@ export const year2Drugs: Drug[] = [
       "Have the blood tests arranged for kidney function and potassium; low potassium makes toxicity more likely.",
       "Take it at the same time each day and do not double up on a missed dose.",
       "Tell prescribers before starting new medicines (e.g. amiodarone, verapamil, diuretics) as many interact.",
+    ],
+    contraindications: [
+      "Intermittent complete heart block or second-degree AV block.",
+      "Supraventricular arrhythmia due to an accessory conducting pathway (e.g. Wolff-Parkinson-White syndrome).",
+      "Ventricular tachycardia or ventricular fibrillation.",
+      "Hypertrophic obstructive cardiomyopathy (unless there is also AF and heart failure); myocarditis.",
+    ],
+    cautions: [
+      "Narrow therapeutic index — hypokalaemia, hypomagnesaemia, hypercalcaemia and hypoxia all increase toxicity.",
+      "Reduce the dose in renal impairment and in the elderly.",
+      "Recent myocardial infarction; thyroid disease.",
+      "Many drugs raise digoxin levels — amiodarone, verapamil, quinine, macrolides, ciclosporin; avoid rapid IV injection.",
     ],
     sources: ["NHS"],
   },
@@ -582,6 +783,18 @@ export const year2Drugs: Drug[] = [
       "Report unusual bleeding or bruising, black stools, or any fall or head injury.",
       "Carry an anticoagulant alert card and tell dentists and surgeons before procedures; a specific reversal agent exists for emergencies.",
     ],
+    contraindications: [
+      "Active clinically significant bleeding.",
+      "Lesion or condition at high risk of major bleeding — recent GI ulceration, oesophageal varices, recent brain or spinal injury or surgery, malignant neoplasm.",
+      "Concomitant use of another anticoagulant.",
+      "Hepatic disease with coagulopathy (Child-Pugh B and C); pregnancy and breastfeeding.",
+    ],
+    cautions: [
+      "Increased bleeding risk — renal impairment (avoid if creatinine clearance below 15 mL/min), elderly, low body weight, concomitant antiplatelets, NSAIDs or SSRIs.",
+      "Strong dual CYP3A4 and P-glycoprotein inhibitors or inducers (azole antifungals, HIV protease inhibitors, rifampicin, carbamazepine).",
+      "Take the 15 mg and 20 mg doses with food; stop before surgery according to bleeding risk.",
+      "Not recommended with prosthetic heart valves or antiphospholipid syndrome.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -610,6 +823,18 @@ export const year2Drugs: Drug[] = [
       "Stop and seek medical advice if you have palpitations, fainting or dizziness.",
       "It is not suitable if you have heart disease, certain electrolyte problems, or take other medicines that affect heart rhythm — check before starting.",
     ],
+    contraindications: [
+      "Known QT-interval prolongation, significant electrolyte disturbance or underlying cardiac disease such as heart failure.",
+      "Concomitant QT-prolonging drugs or potent CYP3A4 inhibitors.",
+      "Moderate or severe hepatic impairment.",
+      "Prolactinoma; GI haemorrhage, obstruction or perforation.",
+    ],
+    cautions: [
+      "Use the lowest effective dose for the shortest time — usually no more than 1 week.",
+      "Greater risk of cardiac effects in those over 60 or on doses above 30 mg/day.",
+      "Renal impairment — reduce the dosing frequency; correct electrolytes first.",
+      "Stop and seek advice if palpitations, dizziness or syncope occur.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -637,6 +862,16 @@ export const year2Drugs: Drug[] = [
       "Take the first dose at bedtime and rise slowly afterwards, as it can cause marked dizziness or fainting when starting or increasing the dose.",
       "If you feel dizzy, sit or lie down until it passes; take care with driving initially.",
       "Tell your eye surgeon you take it before cataract surgery, because it can cause 'floppy iris syndrome'.",
+    ],
+    contraindications: [
+      "History of postural hypotension.",
+      "Modified-release preparations: not for symptomatic postural hypotension.",
+    ],
+    cautions: [
+      "First-dose hypotension — start at the lowest dose, at bedtime, and warn the patient.",
+      "Elderly patients; cardiac disease including pulmonary oedema from aortic or mitral stenosis.",
+      "Hepatic impairment.",
+      "Intra-operative floppy iris syndrome — inform the ophthalmologist before cataract surgery; additive hypotension with PDE5 inhibitors.",
     ],
     sources: ["NHS"],
   },
@@ -671,6 +906,18 @@ export const year2Drugs: Drug[] = [
       "Do not expel the small air bubble in a pre-filled syringe.",
       "Report unusual bleeding, or new limb swelling or pain despite treatment; the dose is reduced in significant kidney impairment.",
     ],
+    contraindications: [
+      "Active major bleeding and conditions with a high risk of uncontrolled haemorrhage.",
+      "History of heparin-induced thrombocytopenia (within the last 100 days or with circulating antibodies).",
+      "Acute bacterial endocarditis.",
+      "Spinal or epidural anaesthesia when a treatment dose has been given (haematoma risk).",
+    ],
+    cautions: [
+      "Renal impairment — reduce the dose and consider anti-Xa monitoring if creatinine clearance is below 30 mL/min.",
+      "Low body weight (under ~45 kg), obesity and the elderly.",
+      "Risk of hyperkalaemia (diabetes, renal impairment, potassium-sparing drugs) — monitor potassium if used beyond 7 days.",
+      "Concurrent drugs affecting haemostasis; monitor the platelet count; time neuraxial procedures carefully.",
+    ],
     sources: [],
   },
   {
@@ -701,6 +948,18 @@ export const year2Drugs: Drug[] = [
       "Fold used patches in half and dispose of them safely — they still contain enough drug to harm a child or pet.",
       "Take regular laxatives and avoid alcohol.",
     ],
+    contraindications: [
+      "Acute respiratory depression.",
+      "Opioid-naïve patients (transdermal patches).",
+      "Acute, intermittent or unstable pain (patches are for stable chronic pain only).",
+      "Paralytic ileus; raised intracranial pressure and head injury.",
+    ],
+    cautions: [
+      "Convert from other opioids using the correct equivalence — potency is roughly 100 times that of morphine.",
+      "Effect increased and prolonged by fever, external heat and CYP3A4 inhibitors (macrolides, azoles, protease inhibitors).",
+      "Elderly, cachectic or debilitated patients; hepatic impairment; respiratory disease; bradyarrhythmia.",
+      "Used patches still contain drug — dispose of safely; concurrent CNS depressants.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -730,6 +989,17 @@ export const year2Drugs: Drug[] = [
       "If GI upset is troublesome, taking it with food or switching to alternate days can help.",
       "Keep it well away from children — iron overdose is dangerous.",
     ],
+    contraindications: [
+      "Iron-overload states — haemochromatosis, haemosiderosis.",
+      "Disorders of iron utilisation (e.g. sideroblastic anaemia, some haemolytic anaemias).",
+      "Patients receiving repeated blood transfusions.",
+    ],
+    cautions: [
+      "Iron overdose is a leading cause of childhood poisoning — store out of reach of children.",
+      "May worsen symptoms in inflammatory bowel disease or intestinal strictures.",
+      "Turns stools black and can mask GI bleeding.",
+      "Reduces absorption of levothyroxine, bisphosphonates, tetracyclines, quinolones and levodopa — separate doses; investigate the cause of the iron deficiency.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -758,6 +1028,16 @@ export const year2Drugs: Drug[] = [
       "It roughly halves PSA — tell any doctor arranging a prostate cancer blood test that you take it.",
       "Women who are or may become pregnant should not handle crushed or broken tablets, because of the risk to a male fetus (the tablets are film-coated for this reason).",
       "Report low mood, or any breast lump, pain or nipple discharge.",
+    ],
+    contraindications: [
+      "Women of childbearing potential and pregnancy — risk of feminisation of a male fetus.",
+      "Children.",
+    ],
+    cautions: [
+      "Women who are or may become pregnant must not handle crushed or broken tablets; use a condom if the partner may be pregnant.",
+      "Obstructive uropathy with a large residual urine volume — monitor.",
+      "Halves serum PSA — interpret PSA against a doubled value when screening for prostate cancer.",
+      "Mood disturbance and depression, and persistent sexual dysfunction, have been reported; report any breast changes (rare male breast cancer).",
     ],
     sources: ["NHS"],
   },
@@ -792,6 +1072,17 @@ export const year2Drugs: Drug[] = [
       "Because it stays in the body a long time, an occasional missed dose matters less, but still do not stop without advice.",
       "Avoid other serotonergic medicines (including St John's wort, tramadol and triptans) unless advised.",
     ],
+    contraindications: [
+      "Concomitant MAOIs, or within the required washout periods.",
+      "Entry into a manic phase.",
+      "Concomitant metoprolol used for heart failure.",
+    ],
+    cautions: [
+      "Long half-life — interactions and adverse effects persist for weeks after stopping.",
+      "Potent CYP2D6 inhibitor — raises levels of tricyclics and some antipsychotics and reduces activation of tamoxifen.",
+      "Poorly controlled epilepsy; cardiac disease and QT prolongation; history of bleeding disorders or concurrent NSAIDs/anticoagulants; hyponatraemia in the elderly.",
+      "Diabetes (alters glycaemic control); increased suicidal thinking early and in the under-25s; reduce the dose in hepatic impairment.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -824,6 +1115,15 @@ export const year2Drugs: Drug[] = [
       "Do not stop suddenly — taper over at least a week to avoid withdrawal and, if it is used for epilepsy, seizures.",
       "It is a controlled drug because it can be misused.",
       "Tell your prescriber about any opioid use, as the combination can dangerously depress breathing.",
+    ],
+    contraindications: [
+      "No absolute contraindication other than hypersensitivity.",
+    ],
+    cautions: [
+      "Risk of severe respiratory depression with opioids, other CNS depressants, in the elderly, and in respiratory or renal impairment — use lower doses.",
+      "Reduce the dose in renal impairment (renally cleared).",
+      "History of drug misuse or dependence (controlled drug); can cause suicidal ideation.",
+      "Avoid abrupt withdrawal — taper over at least a week; may affect diabetes control and give false-positive urinary protein tests.",
     ],
     sources: ["NHS"],
   },
@@ -859,6 +1159,18 @@ export const year2Drugs: Drug[] = [
       "An ECG is often done because it can affect heart rhythm.",
       "Take care with driving until you know how it affects you.",
     ],
+    contraindications: [
+      "Comatose states and CNS depression.",
+      "Parkinson's disease and dementia with Lewy bodies.",
+      "Known QT prolongation, recent acute MI, uncompensated heart failure, or history of ventricular arrhythmia or torsades de pointes.",
+      "Uncorrected hypokalaemia; concomitant QT-prolonging drugs.",
+    ],
+    cautions: [
+      "Perform a baseline ECG and correct electrolytes; cardiovascular disease and family history of QT prolongation.",
+      "Epilepsy — lowers the seizure threshold.",
+      "Elderly patients with dementia — increased risk of stroke and death; avoid.",
+      "Hepatic and renal impairment; hypothyroidism; risk of neuroleptic malignant syndrome and extrapyramidal effects.",
+    ],
     sources: [],
   },
   {
@@ -887,6 +1199,15 @@ export const year2Drugs: Drug[] = [
       "It can be used as often as needed; for frequent use choose a preservative-free preparation.",
       "Remove soft contact lenses before use unless the product says otherwise, and wait about 15 minutes before reinserting them.",
       "Discard a multi-use bottle 28 days after opening.",
+    ],
+    contraindications: [
+      "Hypersensitivity to the drops or to a preservative they contain.",
+    ],
+    cautions: [
+      "Seek assessment for eye pain, marked redness, a change in vision, or symptoms lasting more than a few days.",
+      "Remove soft contact lenses before instilling preservative-containing drops and wait about 15 minutes before reinserting.",
+      "Transient blurring after use — do not drive until vision clears.",
+      "Discard 28 days after opening.",
     ],
     sources: [],
   },
@@ -919,6 +1240,16 @@ export const year2Drugs: Drug[] = [
       "Never stop insulin if you are unwell or not eating — follow sick-day rules and check glucose and ketones more often.",
       "Check glucose and follow DVLA rules before driving; carry ID and a sugar source.",
     ],
+    contraindications: [
+      "Hypoglycaemia.",
+      "No absolute disease contraindication — it is life-sustaining in type 1 diabetes.",
+    ],
+    cautions: [
+      "Hypoglycaemia risk increased by renal or hepatic impairment, weight loss, exercise, alcohol, recovery from illness, and beta blockers (which also mask the warning signs).",
+      "Insulin requirements fall in renal impairment and often in the first trimester of pregnancy.",
+      "Never omit insulin in type 1 diabetes, even when not eating — follow sick-day rules.",
+      "Ensure the correct strength and device, especially with high-strength (U-200/U-300/U-500) insulins; rotate injection sites; risk of hypokalaemia with large IV doses.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -948,6 +1279,18 @@ export const year2Drugs: Drug[] = [
       "Sit down if you feel dizzy, and rise slowly.",
       "Do not use it with erectile dysfunction drugs (sildenafil, tadalafil) — the combination can cause a dangerous fall in blood pressure.",
     ],
+    contraindications: [
+      "Concurrent PDE5 inhibitors (sildenafil, tadalafil, vardenafil) or riociguat.",
+      "Hypotension and hypovolaemia.",
+      "Hypertrophic obstructive cardiomyopathy, aortic or mitral stenosis, constrictive pericarditis, cardiac tamponade.",
+      "Raised intracranial pressure; marked anaemia; angle-closure glaucoma.",
+    ],
+    cautions: [
+      "Hypothyroidism, malnutrition and hypothermia.",
+      "Recent myocardial infarction.",
+      "Severe hepatic or renal impairment.",
+      "Tolerance develops with continuous exposure — use an asymmetric ('eccentric') dosing schedule to keep a nitrate-free interval; do not stop long-acting nitrates abruptly.",
+    ],
     sources: [],
   },
   {
@@ -976,6 +1319,17 @@ export const year2Drugs: Drug[] = [
       "Wind and bloating often settle after the first few days.",
       "Drink plenty of fluid.",
       "In liver disease the dose is adjusted to produce 2–3 soft stools a day.",
+    ],
+    contraindications: [
+      "Galactosaemia.",
+      "Intestinal obstruction.",
+      "Suspected GI perforation.",
+    ],
+    cautions: [
+      "Lactose intolerance.",
+      "Onset of action can take up to 48 hours — not for rapid relief.",
+      "In hepatic encephalopathy, titrate to produce 2–3 soft stools a day.",
+      "Prolonged high doses can cause diarrhoea with electrolyte disturbance.",
     ],
     sources: ["NHS"],
   },
@@ -1009,6 +1363,16 @@ export const year2Drugs: Drug[] = [
       "It is not as reliable as regular contraception and does not protect for the rest of the cycle — use condoms until your next period.",
       "Do a pregnancy test if your period is more than 5–7 days late.",
     ],
+    contraindications: [
+      "Known or suspected established pregnancy (it will not disrupt an implanted pregnancy).",
+      "Severe hepatic impairment.",
+    ],
+    cautions: [
+      "Effectiveness for emergency contraception is reduced by enzyme-inducing drugs — a double dose or, better, a copper IUD is preferred.",
+      "Take within 72 hours and as soon as possible; repeat the dose if vomiting occurs within 2–3 hours.",
+      "Not effective once ovulation has occurred and gives no cover for later intercourse in the same cycle.",
+      "Previous ectopic pregnancy or current pelvic infection; malabsorption syndromes (e.g. Crohn's disease) may reduce efficacy.",
+    ],
     sources: [],
   },
   {
@@ -1039,6 +1403,16 @@ export const year2Drugs: Drug[] = [
       "It is usually lifelong — do not stop when you feel well; have periodic TSH blood tests so the dose can be fine-tuned.",
       "Report palpitations or chest pain, and tell your doctor if you become pregnant, as the dose often needs to increase.",
     ],
+    contraindications: [
+      "Untreated thyrotoxicosis.",
+      "Uncorrected adrenal insufficiency — treat this first to avoid an adrenal crisis.",
+    ],
+    cautions: [
+      "Cardiovascular disease, especially ischaemic heart disease and hypertension, and the elderly — start low (e.g. 25 micrograms) and titrate slowly to avoid precipitating angina or arrhythmia.",
+      "Long-standing hypothyroidism; panhypopituitarism.",
+      "Diabetes — insulin or oral hypoglycaemic requirements may rise.",
+      "Requirements usually increase in pregnancy — check TSH each trimester; over-replacement risks atrial fibrillation and reduced bone density.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1067,6 +1441,15 @@ export const year2Drugs: Drug[] = [
       "Take it once daily; it works within 1–3 hours and is suitable for regular use in hay fever and chronic urticaria.",
       "It is much less sedating than older antihistamines, but a few people still feel drowsy — see how it affects you before driving.",
       "If symptoms are not controlled, a clinician may advise a different or higher-dose antihistamine.",
+    ],
+    contraindications: [
+      "Hypersensitivity to loratadine or desloratadine.",
+    ],
+    cautions: [
+      "Severe hepatic impairment — reduce the dose or dose on alternate days.",
+      "Epilepsy (rare seizure risk).",
+      "Stop about 48 hours before skin-prick allergy testing.",
+      "Pregnancy and breastfeeding — use only if clearly needed.",
     ],
     sources: ["NHS"],
   },
@@ -1100,6 +1483,18 @@ export const year2Drugs: Drug[] = [
       "Store it locked away and out of reach of children — a small amount can be fatal to a child.",
       "An ECG may be done to check heart rhythm.",
     ],
+    contraindications: [
+      "Acute respiratory depression; acute or severe asthma.",
+      "Paralytic ileus or risk of it.",
+      "Phaeochromocytoma; raised intracranial pressure and head injury.",
+      "Concomitant or recent (within 14 days) MAOIs.",
+    ],
+    cautions: [
+      "Long, variable half-life — the drug accumulates over the first days of titration, so respiratory depression can be delayed.",
+      "QT prolongation, particularly at higher doses, with hypokalaemia or other QT-prolonging drugs — baseline and follow-up ECG.",
+      "Elderly and debilitated patients; hepatic and renal impairment.",
+      "Risk of fatal overdose in children and opioid-naïve people — supervised consumption and safe storage; concurrent benzodiazepines, alcohol or gabapentinoids.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1128,6 +1523,18 @@ export const year2Drugs: Drug[] = [
       "Seek urgent help for muscle spasms of the face, neck or eyes, restlessness, or abnormal movements — these usually settle when the drug is stopped.",
       "Take care with driving as it can cause drowsiness.",
       "It should be avoided in Parkinson's disease.",
+    ],
+    contraindications: [
+      "GI haemorrhage, obstruction or perforation.",
+      "3–4 days after GI surgery.",
+      "Phaeochromocytoma; epilepsy (increases seizure frequency and severity).",
+      "History of neuroleptic- or metoclopramide-induced tardive dyskinesia; Parkinson's disease.",
+    ],
+    cautions: [
+      "Use for a maximum of 5 days and restrict the dose — risk of extrapyramidal reactions (acute dystonia in young women, children and young adults) and of tardive dyskinesia with prolonged use.",
+      "Reduce the dose in hepatic and renal impairment.",
+      "Risk of QT prolongation and, rarely, neuroleptic malignant syndrome.",
+      "Cardiac conduction disturbances; elderly patients.",
     ],
     sources: ["NHS"],
   },
@@ -1163,6 +1570,18 @@ export const year2Drugs: Drug[] = [
       "Report slow or shallow breathing, marked drowsiness or confusion.",
       "Do not stop abruptly after regular use, and store it securely away from others, especially children.",
     ],
+    contraindications: [
+      "Acute respiratory depression; acute or severe asthma.",
+      "Paralytic ileus or risk of it; acute abdomen; delayed gastric emptying.",
+      "Comatose patients; head injury and raised intracranial pressure.",
+      "Phaeochromocytoma.",
+    ],
+    cautions: [
+      "Reduce the dose in renal impairment — the active metabolite M6G accumulates and prolongs effects.",
+      "Hepatic impairment; elderly and debilitated patients.",
+      "Hypotension, shock, hypothyroidism and adrenocortical insufficiency; convulsive disorders.",
+      "History of substance dependence; concurrent CNS depressants; toxicity reversed by naloxone.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1193,6 +1612,15 @@ export const year2Drugs: Drug[] = [
       "Rise slowly from lying or sitting.",
       "Do not stop it suddenly, and report excessive thirst, passing a lot of urine, or symptoms of infection.",
     ],
+    contraindications: [
+      "No absolute contraindication other than hypersensitivity; avoid in known narrow-angle glaucoma.",
+    ],
+    cautions: [
+      "Metabolic effects — check weight, waist, blood glucose or HbA1c and lipids at baseline and during treatment; may precipitate or worsen diabetes.",
+      "Cardiovascular and cerebrovascular disease and risk factors for stroke; elderly patients with dementia (increased risk of stroke and death — avoid).",
+      "Parkinson's disease and dementia with Lewy bodies; history of seizures; hepatic impairment; prostatic hypertrophy; paralytic ileus.",
+      "Bone-marrow depression; QT prolongation; avoid abrupt withdrawal.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1222,6 +1650,15 @@ export const year2Drugs: Drug[] = [
       "Space the doses evenly (usually four times a day) and complete the full course.",
       "Stop and seek urgent help for a widespread rash, facial or throat swelling, or breathing difficulty, and tell future prescribers if you react.",
       "Seek advice for severe or bloody diarrhoea.",
+    ],
+    contraindications: [
+      "History of immediate hypersensitivity (anaphylaxis, urticaria, angioedema) to a penicillin or other beta-lactam.",
+    ],
+    cautions: [
+      "History of allergy (non-immediate penicillin reactions or atopy); possible cross-reactivity with cephalosporins and other beta-lactams.",
+      "Renal impairment — accumulation; adjust the dose.",
+      "Not suitable where high or reliable tissue concentrations are needed (e.g. severe infection, endocarditis) — use parenteral therapy.",
+      "Can cause false-positive urinary glucose with copper-reduction tests.",
     ],
     sources: ["NHS"],
   },
@@ -1256,6 +1693,16 @@ export const year2Drugs: Drug[] = [
       "Report any rash promptly, especially with fever or mouth ulcers.",
       "It interacts with many drugs, including hormonal contraceptives — discuss contraception, and do not stop it suddenly.",
     ],
+    contraindications: [
+      "Sinus bradycardia, sino-atrial block, second- and third-degree AV block, and Adams-Stokes syndrome (IV use).",
+      "Acute porphyrias.",
+    ],
+    cautions: [
+      "Narrow therapeutic index with saturable kinetics — small dose changes cause disproportionate changes in plasma level; measure a free level in hypoalbuminaemia, renal impairment or pregnancy.",
+      "Test for HLA-B*1502 in people of Han Chinese or Thai origin (severe skin reactions); hepatic impairment.",
+      "Potent enzyme inducer — reduces the effect of hormonal contraceptives, DOACs and many other drugs; avoid abrupt withdrawal.",
+      "IV injection is highly irritant (purple glove syndrome) — give slowly with cardiac monitoring; long-term effects on bone (osteomalacia) and folate; teratogenic.",
+    ],
     sources: [],
   },
   {
@@ -1288,6 +1735,18 @@ export const year2Drugs: Drug[] = [
       "Report chest pain, fainting, palpitations, or new or worsening mood, aggression or tics.",
       "It is a controlled drug — store it securely and do not share it.",
     ],
+    contraindications: [
+      "Symptomatic cardiovascular disease, moderate-to-severe hypertension, structural cardiac abnormality, cardiomyopathy, serious arrhythmia or channelopathy.",
+      "Hyperthyroidism; phaeochromocytoma; glaucoma.",
+      "History of severe depression, suicidal ideation, psychosis, mania, anorexia nervosa, or drug or alcohol dependence.",
+      "Concomitant or recent (within 14 days) MAOIs; vasculitis or history of cerebrovascular disease.",
+    ],
+    cautions: [
+      "Screen cardiovascular history, blood pressure and pulse before starting and monitor during treatment.",
+      "Monitor height and weight in children (growth suppression) with planned treatment breaks.",
+      "May lower the seizure threshold; watch for new or worsening psychiatric symptoms, aggression, tics and priapism.",
+      "Risk of misuse and diversion; discontinue if there is no benefit after appropriate dose adjustment.",
+    ],
     sources: [],
   },
   {
@@ -1317,6 +1776,18 @@ export const year2Drugs: Drug[] = [
       "It is generally for short-term use — prolonged daily use can worsen bowel function and lower potassium.",
       "Increase fluid and fibre intake and stay active; seek advice if constipation persists or your bowel habit changes.",
     ],
+    contraindications: [
+      "Intestinal obstruction or stenosis.",
+      "Paralytic or atonic ileus.",
+      "Undiagnosed abdominal pain and acute inflammatory bowel disease.",
+      "Severe dehydration.",
+    ],
+    cautions: [
+      "Short-term use only — prolonged use can cause dependence, worsen colonic function and cause hypokalaemia.",
+      "Hypokalaemia potentiates digoxin and antiarrhythmics.",
+      "Children — only on medical advice.",
+      "Ensure adequate fluid intake; it colours the urine yellow-brown or red.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1345,6 +1816,18 @@ export const year2Drugs: Drug[] = [
       "Take it about 1 hour before sex; a heavy or high-fat meal slows the effect, and it only works with sexual arousal.",
       "Seek urgent help for an erection lasting over 4 hours, sudden vision or hearing loss, or chest pain during sex.",
       "If bought without a prescription, still have a medical review, as erectile dysfunction can signal underlying disease.",
+    ],
+    contraindications: [
+      "Concurrent nitrates or nicorandil; concurrent riociguat.",
+      "Recent stroke or myocardial infarction; unstable angina; blood pressure below 90/50 mmHg.",
+      "Hereditary degenerative retinal disorders (e.g. retinitis pigmentosa).",
+      "Previous non-arteritic anterior ischaemic optic neuropathy (NAION) with vision loss in one eye.",
+    ],
+    cautions: [
+      "Cardiovascular disease where sexual activity is inadvisable.",
+      "Anatomical deformation of the penis (angulation, Peyronie's disease); predisposition to priapism — sickle-cell disease, myeloma, leukaemia.",
+      "Active peptic ulceration and bleeding disorders.",
+      "Potent CYP3A4 inhibitors and alpha blockers (start at a low dose); hepatic or severe renal impairment (lower starting dose).",
     ],
     sources: ["NHS"],
   },
@@ -1378,6 +1861,16 @@ export const year2Drugs: Drug[] = [
       "Tell your eye surgeon you take, or have taken, it before cataract surgery, as it can cause 'floppy iris syndrome'.",
       "It treats the symptoms, not the underlying enlargement.",
     ],
+    contraindications: [
+      "History of postural hypotension.",
+      "Modified-release preparations: severe hepatic impairment.",
+    ],
+    cautions: [
+      "First-dose hypotension (less than with non-selective alpha blockers) — take the first dose where the patient can sit or lie down.",
+      "Elderly patients; concomitant PDE5 inhibitors or other antihypertensives (additive hypotension).",
+      "Intra-operative floppy iris syndrome — tell the ophthalmologist before cataract or glaucoma surgery.",
+      "Exclude prostate cancer before starting and monitor.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1410,6 +1903,18 @@ export const year2Drugs: Drug[] = [
       "Avoid alcohol and other sedatives.",
       "Do not stop abruptly after regular use — the dose is reduced gradually.",
     ],
+    contraindications: [
+      "Respiratory depression and severe respiratory insufficiency.",
+      "Sleep apnoea syndrome.",
+      "Marked neuromuscular respiratory weakness, including unstable myasthenia gravis.",
+      "Severe hepatic impairment; acute pulmonary insufficiency.",
+    ],
+    cautions: [
+      "Elderly and debilitated patients — reduce the dose (falls, confusion, next-day impairment).",
+      "Respiratory disease; history of alcohol or drug dependence; personality disorder.",
+      "Short course only (ideally a few days, up to 2–4 weeks including tapering); avoid abrupt withdrawal.",
+      "Concurrent opioids and other CNS depressants; hepatic and renal impairment; do not drive if drowsy the next day.",
+    ],
     sources: [],
   },
   {
@@ -1441,6 +1946,18 @@ export const year2Drugs: Drug[] = [
       "Tell your prescriber if you have epilepsy or take medicines that lower the seizure threshold.",
       "Take care with driving and avoid alcohol.",
       "Do not stop suddenly after regular use — taper to avoid withdrawal.",
+    ],
+    contraindications: [
+      "Acute respiratory depression.",
+      "Acute intoxication with alcohol, hypnotics, other opioids or psychotropic drugs.",
+      "Uncontrolled epilepsy.",
+      "Concomitant or recent (within 14 days) MAOIs; use for opioid withdrawal treatment.",
+    ],
+    cautions: [
+      "Lowers the seizure threshold — epilepsy, head injury, and drugs that also lower it (antidepressants, antipsychotics).",
+      "Serotonin syndrome risk with SSRIs, SNRIs, triptans, MAOIs and other serotonergic drugs.",
+      "Analgesia depends on CYP2D6 — reduced in poor metabolisers, exaggerated in ultra-rapid metabolisers.",
+      "Reduce the dose in hepatic and renal impairment and in the elderly; history of substance misuse; concurrent CNS depressants.",
     ],
     sources: ["NHS"],
   },
@@ -1475,6 +1992,18 @@ export const year2Drugs: Drug[] = [
       "It can raise potassium — extra caution if you take an ACE inhibitor or ARB, spironolactone or potassium supplements.",
       "Seek advice for a spreading rash, mouth ulcers or blistering.",
     ],
+    contraindications: [
+      "Blood dyscrasias.",
+      "Folate deficiency with megaloblastic anaemia.",
+      "First trimester of pregnancy — folate antagonist, risk of neural tube defects.",
+      "Severe renal impairment where repeated plasma-level monitoring is not possible.",
+    ],
+    cautions: [
+      "Predisposition to folate deficiency — elderly, pregnancy, malnutrition.",
+      "Hyperkalaemia risk — extra caution with ACE inhibitors, ARBs, potassium-sparing diuretics or supplements; monitor potassium and renal function.",
+      "Raises serum creatinine by inhibiting tubular secretion, without a true fall in GFR.",
+      "Interacts with methotrexate (marrow toxicity) and increases the effect of warfarin and phenytoin; porphyria and G6PD deficiency.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1508,6 +2037,18 @@ export const year2Drugs: Drug[] = [
       "Avoid grapefruit juice, which raises drug levels.",
       "Report a very slow pulse, breathlessness, or swelling of the ankles.",
     ],
+    contraindications: [
+      "Hypotension and cardiogenic shock; significant bradycardia.",
+      "Second- or third-degree AV block and sick sinus syndrome (unless paced).",
+      "Atrial flutter or fibrillation complicating Wolff-Parkinson-White syndrome.",
+      "History of, or current, heart failure or significantly impaired left ventricular function; IV use with a beta blocker; acute porphyrias.",
+    ],
+    cautions: [
+      "First-degree AV block; acute phase of MI (avoid if bradycardia, hypotension or left ventricular failure).",
+      "Avoid combining with a beta blocker — risk of severe bradycardia, heart block or heart failure.",
+      "Reduce the dose in hepatic impairment; markedly worsens constipation.",
+      "Raises digoxin levels; grapefruit juice increases the plasma concentration; do not stop abruptly in angina.",
+    ],
     sources: ["NHS"],
   },
   {
@@ -1538,6 +2079,18 @@ export const year2Drugs: Drug[] = [
       "A metallic taste is common and harmless.",
       "Do not drink alcohol, and do not drive if you feel drowsy or 'hungover' the next day (you may be over the drug-driving limit).",
       "Take it immediately before bed only when you can allow 7–8 hours for sleep, and do not stop abruptly after regular use.",
+    ],
+    contraindications: [
+      "Respiratory failure and marked neuromuscular respiratory weakness, including unstable myasthenia gravis.",
+      "Sleep apnoea syndrome.",
+      "Severe hepatic impairment.",
+      "Acute or severe pulmonary insufficiency.",
+    ],
+    cautions: [
+      "Elderly and debilitated patients — halve the dose (falls, confusion, next-day impairment).",
+      "History of drug or alcohol dependence; respiratory disease; hepatic and renal impairment.",
+      "Short-term use only (a few days up to 2–4 weeks including tapering) — tolerance and dependence; avoid abrupt withdrawal.",
+      "Risk of complex sleep behaviours (sleep-walking, sleep-driving) — stop if they occur; concurrent opioids and other CNS depressants; next-day driving impairment.",
     ],
     sources: ["NHS"],
   },

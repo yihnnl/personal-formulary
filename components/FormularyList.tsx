@@ -74,9 +74,20 @@ export default function FormularyList({ year }: { year: Year }) {
             Your drugs
           </h1>
         </div>
-        <p className="text-sm font-medium text-ink tabular-nums shrink-0">
-          {hydrated ? knownCount : "–"} / {drugs.length} known
-        </p>
+        <div className="shrink-0 text-right">
+          <p className="text-sm font-medium text-ink tabular-nums">
+            {hydrated ? knownCount : "–"} / {drugs.length} known
+          </p>
+          <Link
+            href="/compare"
+            className="mt-1 inline-flex items-center gap-1 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
+          >
+            Compare drugs
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
+        </div>
       </div>
 
       <div className="mt-4">

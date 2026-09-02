@@ -20,6 +20,13 @@ export interface Drug {
   /** The subset of adrs that are most "high-yield" / clinically distinctive.
    * Used to prioritise Patient Case question generation. */
   keyADRs: string[];
+  /** Situations where the drug should generally not be used. Concise,
+   * revision-focused — the points a pharmacy student should recognise, not an
+   * exhaustive SmPC list. Checked against BNF / NHS. */
+  contraindications: string[];
+  /** Situations needing extra care, monitoring, dose adjustment or clinical
+   * judgement (not absolute bars to use). Concise and revision-focused. */
+  cautions: string[];
   counselling: string[];
   sources: Source[];
   /** "pending" until study content has been written and checked against the

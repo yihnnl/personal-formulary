@@ -69,7 +69,8 @@ export default function RandomDrill({ year }: { year: Year }) {
       {!revealed && (
         <p className="mt-4 text-[15px] text-muted leading-relaxed">
           Without looking it up, can you recall its drug class, indications,
-          mechanism of action, ADRs and counselling points?
+          mechanism of action, ADRs, contraindications, cautions and counselling
+          points?
         </p>
       )}
 
@@ -102,7 +103,14 @@ export default function RandomDrill({ year }: { year: Year }) {
               pad
             />
             <Field num="04" label="Adverse Drug Reactions" items={drug.adrs} pad />
-            <Field num="05" label="Counselling Points" items={drug.counselling} pad />
+            <Field
+              num="05"
+              label="Contraindications"
+              items={drug.contraindications}
+              pad
+            />
+            <Field num="06" label="Cautions" items={drug.cautions} pad />
+            <Field num="07" label="Counselling Points" items={drug.counselling} pad />
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
