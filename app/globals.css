@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  /* keep text at its intended size when a phone is rotated */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: #F8F7F2;
+  color: #171717;
+  /* never let a long unbroken string push the page wider than the screen */
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background-color: #E7D8BC;
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-warmbg;
+  }
+
+  /* horizontal touch-scroll without a visible scrollbar (filter chip rows) */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
