@@ -11,6 +11,7 @@ import {
   LIBRARY_QUICK_FILTERS,
 } from "@/lib/topics";
 import { useProgress } from "@/lib/useProgress";
+import { useFavorites } from "@/lib/useFavorites";
 import ProgressBar from "@/components/ProgressBar";
 import SearchBar from "@/components/SearchBar";
 import DrugListItem from "@/components/DrugListItem";
@@ -30,6 +31,7 @@ export default function FormularyList({ year }: { year: Year }) {
   const activeTopic = topicSlug ? getTopic(topicSlug) : null;
 
   const { isKnown, toggleDrugKnown, hydrated, known } = useProgress(year);
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   const knownCount = useMemo(
     () => drugs.filter((d) => known[d.slug]).length,
@@ -78,15 +80,26 @@ export default function FormularyList({ year }: { year: Year }) {
           <p className="text-sm font-medium text-ink tabular-nums">
             {hydrated ? knownCount : "–"} / {drugs.length} known
           </p>
-          <Link
-            href="/compare"
-            className="mt-1 inline-flex items-center gap-1 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
-          >
-            Compare drugs
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </Link>
+          <div className="mt-1 flex flex-col items-end gap-1">
+            <Link
+              href="/favorites"
+              className="inline-flex items-center gap-1 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
+            >
+              Favorites
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </Link>
+            <Link
+              href="/compare"
+              className="inline-flex items-center gap-1 text-[13px] font-medium text-olive-dark hover:underline underline-offset-4 focus-ring rounded"
+            >
+              Compare drugs
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -174,6 +187,8 @@ export default function FormularyList({ year }: { year: Year }) {
               yearParam={yearParam}
               known={isKnown(drug.slug)}
               onToggle={() => toggleDrugKnown(drug.slug)}
+              favorite={isFavorite(drug.slug)}
+              onToggleFavorite={() => toggleFavorite(drug.slug)}
             />
           ))
         )}

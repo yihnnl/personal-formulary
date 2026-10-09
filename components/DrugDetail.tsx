@@ -6,10 +6,12 @@ import type { Year } from "@/lib/types";
 import { getDrugsForYear, toYearParam, yearLabel } from "@/lib/drugs";
 import { slugForTag } from "@/lib/topics";
 import { useProgress } from "@/lib/useProgress";
+import { useFavorites } from "@/lib/useFavorites";
 import Tag from "@/components/Tag";
 import Breadcrumb from "@/components/Breadcrumb";
 import DrugNotes from "@/components/DrugNotes";
 import RelatedDrugs from "@/components/RelatedDrugs";
+import FavoriteButton from "@/components/FavoriteButton";
 
 const SECTIONS = [
   { key: "drugClass", num: "01", label: "Drug Class" },
@@ -36,6 +38,7 @@ const LIST_SECTIONS = new Set([
 export default function DrugDetail({ year, slug }: { year: Year; slug: string }) {
   const drug = getDrugsForYear(year).find((d) => d.slug === slug);
   const { isKnown, toggleDrugKnown } = useProgress(year);
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!drug) return notFound();
 
@@ -56,22 +59,29 @@ export default function DrugDetail({ year, slug }: { year: Year; slug: string })
         <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-ink break-words min-w-0">
           {drug.name}
         </h1>
-        <button
-          type="button"
-          onClick={() => toggleDrugKnown(drug.slug)}
-          className={`shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium border transition-colors focus-ring ${
-            known
-              ? "bg-olive border-olive text-white"
-              : "bg-surface border-line text-ink hover:border-olive/50"
-          }`}
-        >
-          {known && (
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-          )}
-          {known ? "Known" : "I know this"}
-        </button>
+        <div className="shrink-0 flex items-center gap-1">
+          <FavoriteButton
+            active={isFavorite(drug.slug)}
+            onToggle={() => toggleFavorite(drug.slug)}
+            drugName={drug.name}
+          />
+          <button
+            type="button"
+            onClick={() => toggleDrugKnown(drug.slug)}
+            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium border transition-colors focus-ring ${
+              known
+                ? "bg-olive border-olive text-white"
+                : "bg-surface border-line text-ink hover:border-olive/50"
+            }`}
+          >
+            {known && (
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            )}
+            {known ? "Known" : "I know this"}
+          </button>
+        </div>
       </div>
 
       <div className="mt-3 flex flex-wrap gap-2">

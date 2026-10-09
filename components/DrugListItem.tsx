@@ -2,18 +2,23 @@
 
 import Link from "next/link";
 import { Drug } from "@/lib/types";
+import FavoriteButton from "@/components/FavoriteButton";
 
 export default function DrugListItem({
   drug,
   yearParam,
   known,
   onToggle,
+  favorite,
+  onToggleFavorite,
 }: {
   drug: Drug;
   /** URL segment for the drug's year, e.g. "year-2" */
   yearParam: string;
   known: boolean;
   onToggle: () => void;
+  favorite: boolean;
+  onToggleFavorite: () => void;
 }) {
   return (
     <div className="flex items-center gap-2 sm:gap-3 border-b border-line last:border-b-0 group">
@@ -54,6 +59,13 @@ export default function DrugListItem({
           {drug.tags.join(" · ")}
         </p>
       </Link>
+
+      <FavoriteButton
+        active={favorite}
+        onToggle={onToggleFavorite}
+        drugName={drug.name}
+        size="sm"
+      />
     </div>
   );
 }

@@ -7,6 +7,7 @@ const links = [
   { href: "/formulary", label: "Formulary" },
   { href: "/topics", label: "Topics" },
   { href: "/test-yourself", label: "Test Yourself" },
+  { href: "/favorites", label: "Favorites" },
 ];
 
 export default function Nav() {

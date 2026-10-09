@@ -1,12 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import type { Drug, Year } from "@/lib/types";
-import { getReadyDrugs, toYearParam, yearLabel } from "@/lib/drugs";
+import { useCallback, useEffect, useState } from "react";
+import type { Drug } from "@/lib/types";
 import { slugForTag } from "@/lib/topics";
-import { useProgress } from "@/lib/useProgress";
 import Tag from "@/components/Tag";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb, { Crumb } from "@/components/Breadcrumb";
 
 function pickRandom(pool: Drug[], exclude?: string): Drug {
   const candidates =
@@ -15,39 +13,46 @@ function pickRandom(pool: Drug[], exclude?: string): Drug {
 }
 
 /**
- * Random Drug recall drill for a single academic year. The pool is that year's
- * drugs only, and "I knew this" writes to that year's progress bucket.
+ * Random Drug recall drill over any drug pool — the caller decides what's in
+ * it (one year's drugs, or a cross-year favorites set) and where "I knew
+ * this" gets recorded via `setDrugKnown`.
  *
  * The first drug is chosen in an effect (not during render) so the randomly
  * chosen name is identical between the prerendered HTML and the client — i.e.
  * no hydration mismatch.
  */
-export default function RandomDrill({ year }: { year: Year }) {
-  const pool = useMemo(() => getReadyDrugs(year), [year]);
+export default function RandomDrill({
+  pool,
+  crumbs,
+  setDrugKnown,
+}: {
+  pool: Drug[];
+  crumbs: Crumb[];
+  setDrugKnown: (slug: string, value: boolean) => void;
+}) {
   const [drug, setDrug] = useState<Drug | null>(null);
   const [revealed, setRevealed] = useState(false);
-  const { setDrugKnown } = useProgress(year);
-  const yearParam = toYearParam(year);
 
   useEffect(() => {
-    setDrug(pickRandom(pool));
+    setDrug(pool.length ? pickRandom(pool) : null);
     setRevealed(false);
   }, [pool]);
 
   const next = useCallback(() => {
-    setDrug((prev) => pickRandom(pool, prev?.slug));
+    setDrug((prev) => (pool.length ? pickRandom(pool, prev?.slug) : null));
     setRevealed(false);
   }, [pool]);
 
-  const header = (
-    <Breadcrumb
-      items={[
-        { label: "Test Yourself", href: "/test-yourself" },
-        { label: yearLabel(year), href: `/test-yourself/${yearParam}` },
-        { label: "Random Drug" },
-      ]}
-    />
-  );
+  const header = <Breadcrumb items={crumbs} />;
+
+  if (pool.length === 0) {
+    return (
+      <div className="max-w-2xl mx-auto px-5 sm:px-8 py-10 sm:py-14">
+        {header}
+        <p className="mt-10 text-center text-muted">No drugs in this set yet.</p>
+      </div>
+    );
+  }
 
   if (!drug) {
     return (

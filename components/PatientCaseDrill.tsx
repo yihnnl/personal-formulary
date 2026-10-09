@@ -1,11 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import type { Year } from "@/lib/types";
-import { getReadyDrugs, toYearParam, yearLabel } from "@/lib/drugs";
+import type { Drug } from "@/lib/types";
+import { getYearForDrug, toYearParam } from "@/lib/drugs";
 import { generateCase, CaseQuestion } from "@/lib/case-templates";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb, { Crumb } from "@/components/Breadcrumb";
 
 const TEMPLATE_LABELS: Record<CaseQuestion["template"], string> = {
   adr: "ADR recognition",
@@ -16,42 +16,38 @@ const TEMPLATE_LABELS: Record<CaseQuestion["template"], string> = {
 };
 
 /**
- * Patient Case MCQ drill for a single academic year. Every question — the
- * correct drug and all distractors — is generated from that year's dataset
- * only, via the shared template-based `generateCase` (no AI).
+ * Patient Case MCQ drill over any drug pool — the caller decides what's in it
+ * (one year's drugs, or a cross-year favorites set). Every question — the
+ * correct drug and all distractors — is generated from that pool only, via
+ * the shared template-based `generateCase` (no AI).
  *
  * Question generation runs in an effect (not during render) so the random
  * question is created only on the client and never disagrees with the
  * prerendered HTML (no hydration mismatch).
  */
-export default function PatientCaseDrill({ year }: { year: Year }) {
-  const drugs = useMemo(() => getReadyDrugs(year), [year]);
-  const yearParam = toYearParam(year);
-
+export default function PatientCaseDrill({
+  pool,
+  crumbs,
+}: {
+  pool: Drug[];
+  crumbs: Crumb[];
+}) {
   const [question, setQuestion] = useState<CaseQuestion | null>(null);
   const [ready, setReady] = useState(false);
   const [selected, setSelected] = useState<number | null>(null);
 
   useEffect(() => {
-    setQuestion(generateCase(drugs));
+    setQuestion(generateCase(pool));
     setSelected(null);
     setReady(true);
-  }, [drugs]);
+  }, [pool]);
 
   const next = useCallback(() => {
-    setQuestion(generateCase(drugs));
+    setQuestion(generateCase(pool));
     setSelected(null);
-  }, [drugs]);
+  }, [pool]);
 
-  const header = (
-    <Breadcrumb
-      items={[
-        { label: "Test Yourself", href: "/test-yourself" },
-        { label: yearLabel(year), href: `/test-yourself/${yearParam}` },
-        { label: "Patient Case" },
-      ]}
-    />
-  );
+  const header = <Breadcrumb items={crumbs} />;
 
   if (!ready) {
     return (
@@ -67,7 +63,8 @@ export default function PatientCaseDrill({ year }: { year: Year }) {
       <div className="max-w-2xl mx-auto px-5 sm:px-8 py-10 sm:py-14">
         {header}
         <p className="mt-10 text-center text-muted">
-          Not enough drugs in this year to generate patient cases yet.
+          Not enough drugs in this set to generate patient cases yet (need at
+          least 4).
         </p>
       </div>
     );
@@ -129,12 +126,18 @@ export default function PatientCaseDrill({ year }: { year: Year }) {
             {" "}Review its formulary page for the full drug class, indications,
             mechanism, ADRs and counselling points.
           </p>
-          <Link
-            href={`/formulary/${yearParam}/${question.drug.slug}`}
-            className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-olive-dark hover:underline underline-offset-4"
-          >
-            View {question.drug.name}
-          </Link>
+          {(() => {
+            const drugYear = getYearForDrug(question.drug.slug);
+            if (!drugYear) return null;
+            return (
+              <Link
+                href={`/formulary/${toYearParam(drugYear)}/${question.drug.slug}`}
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-olive-dark hover:underline underline-offset-4"
+              >
+                View {question.drug.name}
+              </Link>
+            );
+          })()}
         </div>
       )}
 
