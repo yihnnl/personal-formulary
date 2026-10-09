@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Personal Formulary",
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Nav />
           <main className="flex-1 w-full overflow-x-clip">{children}</main>
         </div>
+        <Analytics />
       </body>
     </html>
   );

@@ -589,6 +589,21 @@ export const TOPICS: Topic[] = [
     match: { tags: ["H2 receptor antagonist", "Acid suppression"] },
     sources: BNF_NHS,
   },
+  {
+    slug: "proton-pump-inhibitor",
+    name: "Proton pump inhibitors (PPIs)",
+    type: "drug-class",
+    summary:
+      "PPIs irreversibly inhibit the H+/K+-ATPase (proton pump) on gastric parietal cells, blocking the final step of acid secretion. Because inhibition is irreversible, acid suppression outlasts the drug's plasma half-life until new pump molecules are synthesised. Long-term use is linked to hypomagnesaemia, vitamin B12 deficiency, fracture risk and GI infection, and PPIs can mask the symptoms of gastric cancer.",
+    commonUses: [
+      "Gastro-oesophageal reflux disease (GORD) and heartburn",
+      "Peptic ulcer disease, including NSAID-associated ulcers",
+      "Helicobacter pylori eradication (with antibiotics)",
+      "Prophylaxis of NSAID- or corticosteroid-induced gastric ulceration",
+    ],
+    match: { tags: ["Proton pump inhibitor", "Antisecretory"] },
+    sources: BNF_NHS,
+  },
 
   /* -------------------- Endocrine / metabolic -------------------- */
   {
