@@ -2094,4 +2094,45 @@ export const year2Drugs: Drug[] = [
     ],
     sources: ["NHS"],
   },
+  {
+    slug: "omeprazole",
+    reference: 51,
+    name: "Omeprazole",
+    tags: ["Proton pump inhibitor", "Antisecretory"],
+    drugClass: "Proton pump inhibitor (PPI)",
+    indications: [
+      "Gastro-oesophageal reflux disease (GORD) and heartburn",
+      "Peptic ulcer disease, including NSAID-associated ulcers",
+      "Helicobacter pylori eradication (with antibiotics)",
+      "Prophylaxis of NSAID- or corticosteroid-induced gastric ulceration",
+    ],
+    mechanism:
+      "Irreversibly inhibits the H+/K+-ATPase (proton pump) on the luminal surface of gastric parietal cells, blocking the final step of acid secretion into the stomach. Because the inhibition is irreversible, acid suppression outlasts the drug's plasma half-life until new pump molecules are synthesised.",
+    mechanismSummary:
+      "Irreversible H+/K+-ATPase (proton pump) inhibition in gastric parietal cells → ↓ gastric acid secretion",
+    adrs: [
+      "Headache",
+      "Abdominal pain, nausea and vomiting",
+      "Diarrhoea or constipation; flatulence",
+      "With long-term use: hypomagnesaemia, fracture risk and vitamin B12 deficiency",
+    ],
+    keyADRs: ["Increased fracture risk and GI infection susceptibility with long-term use"],
+    counselling: [
+      "Take before food, usually in the morning.",
+      "Swallow capsules/tablets whole — do not chew or crush enteric-coated formulations.",
+      "If bought over the counter, use for no more than 2 weeks and see a doctor if symptoms persist.",
+      "Report new or worsening indigestion-type symptoms with weight loss, difficulty swallowing or vomiting blood promptly, as these need urgent assessment.",
+    ],
+    contraindications: [
+      "Known hypersensitivity to omeprazole or other proton pump inhibitors.",
+    ],
+    cautions: [
+      "Reduces the antiplatelet effect of clopidogrel via CYP2C19 inhibition — avoid co-prescribing where possible.",
+      "Can mask symptoms of gastric cancer — investigate alarm features (e.g. weight loss, dysphagia, GI bleeding) before starting, especially in older patients.",
+      "Long-term use (over about 1 year): monitor for hypomagnesaemia, vitamin B12 deficiency, fracture and GI infections (e.g. Clostridioides difficile) due to reduced gastric acidity.",
+      "Hepatic impairment — reduce dose.",
+      "Also interacts with digoxin, phenytoin, warfarin and St John's Wort — check before co-prescribing.",
+    ],
+    sources: ["NHS"],
+  },
 ];
