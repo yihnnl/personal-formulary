@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import NavSearch from "@/components/NavSearch";
 
 const links = [
   { href: "/formulary", label: "Formulary" },
@@ -18,15 +19,18 @@ export default function Nav() {
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         {/* Stacks into two rows on phones, single row from sm up */}
         <div className="flex flex-col sm:h-16 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex h-12 items-center sm:h-auto">
+          <div className="flex h-12 items-center gap-4 sm:h-auto sm:flex-1 sm:min-w-0">
             <Link
               href="/"
-              className="text-[15px] font-semibold tracking-tight text-ink focus-ring rounded"
+              className="shrink-0 text-[15px] font-semibold tracking-tight text-ink focus-ring rounded"
             >
               Personal Formulary
             </Link>
+            <div className="flex-1 min-w-0 max-w-[260px]">
+              <NavSearch />
+            </div>
           </div>
-          <nav className="-mx-1 flex items-center gap-1 overflow-x-auto no-scrollbar px-1 pb-2.5 sm:pb-0">
+          <nav className="-mx-1 flex items-center gap-1 overflow-x-auto no-scrollbar px-1 pb-2.5 sm:pb-0 sm:shrink-0">
             {links.map((link) => {
               const active =
                 pathname === link.href ||
