@@ -10,10 +10,27 @@ import {
 } from "@/lib/drugs";
 import type { Drug, Year } from "@/lib/types";
 
+/** Short label explaining why a result matched, shown under the drug name. */
+function matchLabel(d: Drug, q: string): string {
+  if (q) {
+    const indication = d.indications.find((i) => i.toLowerCase().includes(q));
+    if (indication && !d.name.toLowerCase().includes(q)) return indication;
+    if (
+      d.drugClass.toLowerCase().includes(q) &&
+      !d.tags.some((t) => t.toLowerCase().includes(q))
+    ) {
+      return d.drugClass;
+    }
+  }
+  return d.tags.join(" · ");
+}
+
 /**
  * Site-wide drug search shown in the top nav. Matches across all years at
  * once (unlike the per-year search in FormularyList) since the whole point
- * is not needing to know which year a drug lives in.
+ * is not needing to know which year a drug lives in. Matches on drug name,
+ * tags, drug class, and indications (so searching a condition like
+ * "hypertension" or a class like "beta blocker" also finds drugs).
  */
 export default function NavSearch() {
   const router = useRouter();
@@ -34,7 +51,9 @@ export default function NavSearch() {
         starts.push(d);
       } else if (
         d.name.toLowerCase().includes(q) ||
-        d.tags.some((t) => t.toLowerCase().includes(q))
+        d.tags.some((t) => t.toLowerCase().includes(q)) ||
+        d.drugClass.toLowerCase().includes(q) ||
+        d.indications.some((i) => i.toLowerCase().includes(q))
       ) {
         rest.push(d);
       }
@@ -124,6 +143,7 @@ export default function NavSearch() {
             <ul className="max-h-80 overflow-y-auto py-1">
               {results.map((drug, i) => {
                 const year = getYearForDrug(drug.slug);
+                const subtitle = matchLabel(drug, query.trim().toLowerCase());
                 return (
                   <li key={drug.slug}>
                     <button
@@ -140,7 +160,7 @@ export default function NavSearch() {
                           {drug.name}
                         </span>
                         <span className="block text-[12px] text-muted truncate">
-                          {drug.tags.join(" · ")}
+                          {subtitle}
                         </span>
                       </span>
                       {year && (
